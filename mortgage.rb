@@ -51,7 +51,7 @@ loop do
   monthly_payment = loan.to_f * (monthly_interest / (1 -
     (1 + monthly_interest)**-months.to_i))
 
-  puts "Your monthly payment is #{monthly_payment}"
+  puts "Your monthly payment is $#{format('%.2f', monthly_payment)}"
 
   puts 'Another calculation?'
   answer = gets.chomp
