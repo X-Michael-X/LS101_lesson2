@@ -32,7 +32,7 @@ loop do # main loop
   loop do
     prompt('What is the first number?')
     first_num = gets.chomp
-    break if  valid?(first_num)
+    break if valid?(first_num)
     prompt('That doesn\'t look like a valid number')
   end
 
