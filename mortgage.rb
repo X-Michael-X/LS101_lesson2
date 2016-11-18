@@ -9,12 +9,8 @@ loop do
   loan = ''
   loop do
     loan = gets.chomp
-
-    if loan.empty? || loan.to_f <= 0
-      puts 'You must enter a positive loan amount.'
-    else
-      break
-    end
+    break unless loan.empty? || loan.to_f <= 0
+    puts 'You must enter a positive loan amount.'
   end
 
   puts 'What is the interest rate on this loan?'
@@ -23,12 +19,8 @@ loop do
   apr = ''
   loop do
     apr = gets.chomp
-
-    if apr.empty? || apr.to_f <= 0
-      puts 'You must enter a positive interest rate.'
-    else
-      break
-    end
+    break unless apr.empty? || apr.to_f <= 0
+    puts 'You must enter a positive interest rate.'
   end
 
   puts 'What is the loan\'s duration in years?'
@@ -36,12 +28,8 @@ loop do
   years = ''
   loop do
     years = gets.chomp
-
-    if years.empty? || years.to_i < 0
-      puts 'You must enter a valid loan duration.'
-    else
-      break
-    end
+    break unless years.empty? || years.to_i < 0
+    puts 'You must enter a valid loan duration.'
   end
 
   annual_interest = apr.to_f / 100
