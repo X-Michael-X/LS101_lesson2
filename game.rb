@@ -1,31 +1,39 @@
-# Rock Paper Scissors Game
+# Rock Paper Scissors Lizard Spock Game
 
-VALID_CHOICES = %w(rock paper scissors).freeze
+VALID_CHOICES =
+  %w(rock paper scissors lizard spock).freeze
 
-puts 'Welcome to Rock Paper Scissors'
-puts '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+puts 'Welcome to Rock Paper Scissors lizard Spock'
+puts '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 
 loop do
-  user_choice = ''
+  player = ''
+
   loop do
-    puts 'Please select Rock, Paper, or Scissors.'
-    user_choice = gets.chomp.downcase
-    break if VALID_CHOICES.include?(user_choice)
+    puts 'Please select Rock, Paper, Scissors, Lizard or Spock.'
+    player = gets.chomp.downcase
+    break if VALID_CHOICES.include?(player)
     puts 'Please make a valid selection.'
   end
 
-  puts "You have chosen #{user_choice.capitalize}."
+  puts "You have chosen #{player.capitalize}."
 
-  computers_choice = VALID_CHOICES.sample
-  puts "The Computer chooses #{computers_choice.capitalize}."
+  computer = VALID_CHOICES.sample
+  puts "The Computer chooses #{computer.capitalize}."
 
-  if user_choice == computers_choice
+  if player == computer
     puts 'It\'s a Draw.'
-  elsif user_choice == 'rock' && computers_choice == 'scissors'
+  elsif player == 'rock' && (computer == 'scissors' || computer == 'lizard')
     puts 'You Win.'
-  elsif user_choice == 'paper' && computers_choice == 'rock'
+  elsif player == 'paper' && (computer == 'rock' || computer == 'spock')
     puts 'You Win.'
-  elsif user_choice == 'scissors' && computers_choice == 'paper'
+  elsif player == 'scissors' && (computer == 'paper' || computer == 'lizard')
+    puts 'You Win.'
+  elsif player == 'lizard' && (computer ==
+    'paper' || computer == 'spock')
+    puts 'You Win.'
+  elsif player == 'spock' && (computer ==
+    'scissors' || computer == 'rock')
     puts 'You Win.'
   else
     puts 'You Lose.'
@@ -34,5 +42,4 @@ loop do
   puts 'Would you like to play again? (Y/N)'
   answer = gets.chomp.downcase
   break unless answer.start_with?('y')
-
 end
