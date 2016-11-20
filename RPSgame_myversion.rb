@@ -9,7 +9,7 @@ VALID_CHOICES =
 
 puts 'Welcome to Rock Paper Scissors Lizard Spock'
 puts '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-puts 'First to Five Points Wins!'
+puts '~~~~~~~First to Five Points Wins!~~~~~~~~~~'
 
 player_score = 0
 computer_score = 0
