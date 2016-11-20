@@ -41,12 +41,10 @@ loop do
   elsif player == 'scissors' && (computer == 'paper' || computer == 'lizard')
     puts 'You Win This Round.'
     player_score += 1
-  elsif player == 'lizard' && (computer ==
-    'paper' || computer == 'spock')
+  elsif player == 'lizard' && (computer == 'paper' || computer == 'spock')
     puts 'You Win This Round.'
     player_score += 1
-  elsif player == 'spock' && (computer ==
-    'scissors' || computer == 'rock')
+  elsif player == 'spock' && (computer == 'scissors' || computer == 'rock')
     puts 'You Win This Round.'
     player_score += 1
   else
