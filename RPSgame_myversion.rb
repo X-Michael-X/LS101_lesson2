@@ -9,12 +9,13 @@ VALID_CHOICES =
 
 puts 'Welcome to Rock Paper Scissors Lizard Spock'
 puts '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-puts 'First to Five Points Wins!'
+puts '~~~~~~~First to Five Points Wins!~~~~~~~~~~'
 
 player_score = 0
 computer_score = 0
 
 loop do
+  
   player = ''
 
   loop do
@@ -40,12 +41,10 @@ loop do
   elsif player == 'scissors' && (computer == 'paper' || computer == 'lizard')
     puts 'You Win This Round.'
     player_score += 1
-  elsif player == 'lizard' && (computer ==
-    'paper' || computer == 'spock')
+  elsif player == 'lizard' && (computer == 'paper' || computer == 'spock')
     puts 'You Win This Round.'
     player_score += 1
-  elsif player == 'spock' && (computer ==
-    'scissors' || computer == 'rock')
+  elsif player == 'spock' && (computer == 'scissors' || computer == 'rock')
     puts 'You Win This Round.'
     player_score += 1
   else
@@ -55,19 +54,18 @@ loop do
 
   puts "You have #{player_score} points"
   puts "The Computer has #{computer_score} points."
-  
+
   if player_score == 5
     puts 'You reached Five Points, You Won!'
   elsif computer_score == 5
     puts 'The Computer reached Five Points, You Lose!'
-  else
   end
-  
+
   break if player_score == 5 || computer_score == 5
-  
+
   puts 'Would you like to go another round?(Y/N)'
   answer = gets.chomp.downcase
   break unless answer.start_with?('y')
-  
+
 end
 

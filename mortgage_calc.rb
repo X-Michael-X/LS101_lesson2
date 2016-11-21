@@ -39,6 +39,7 @@ loop do
   monthly_payment = loan.to_f * (monthly_interest / (1 -
     (1 + monthly_interest)**-months.to_i))
 
+  #Below altered version of code along, but functions the same?... what does the 02 in format(%02.2f, _ ) do?
   puts "Your monthly payment is $#{format('%.2f', monthly_payment)}"
 
   puts 'Another calculation?'
