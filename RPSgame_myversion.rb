@@ -68,4 +68,3 @@ loop do
   break unless answer.start_with?('y')
 
 end
-
